@@ -40,8 +40,8 @@ def main():
     # TODO: create the function
     result = parallel_processing(n,m,data)
 
-    for i,j in result:
-        print(i,j)
+    for rez in result:
+        print(rez[0],rez[1])
     
     # TODO: print out the results, each pair in it's own line
 
