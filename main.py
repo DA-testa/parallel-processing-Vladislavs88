@@ -4,26 +4,11 @@
 def parallel_processing(n, m, data):
     flow=[0]*n
     output = []
-    int1 =0
-    int2 =0
-    # TODO: write the function for simulating parallel tasks, 
-    # create the output pairs
-        while int<m:
-            for i in range(n):
-                if flow[i]==0 and int1 <m:
-                    flow[i] = data[int1]
-                    output.append([i,int2])
-                    int1 +=1
-            int2 +=1
-            
-#             j+=1
-        
-#         if j==n:
-#             wait=min(flow)
-#             flow=[change - wait for change in flow]
-#             j=flow.index(0)
-#         flow[j]=data[i]
-#         output.append([j,sum(flow[:j+1])])
+    
+    for i, dat in enumerate(data):
+        mainiga= min(range(n), key=flow.__getitem__)
+        output.append((mainiga,flow[mainiga]))
+        flow[mainiga] +=dat
 
     return output
 
@@ -36,6 +21,7 @@ def main():
     n,m = map(int,input().split())
     
     data =list(map(int,input().split()))
+    result = parallel_processing(n,m,data)
 
 
 
@@ -45,10 +31,10 @@ def main():
     
 
     # TODO: create the function
-    result = parallel_processing(n,m,data)
+    
 
-    for rez in result:
-        print(rez[0],rez[1])
+    for flow,mainiga_time in result:
+        print(flow,mainiga_time)
     
     # TODO: print out the results, each pair in it's own line
 
