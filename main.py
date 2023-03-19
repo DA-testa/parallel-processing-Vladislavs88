@@ -15,7 +15,7 @@ def parallel_processing(n, m, data):
                     output.append([i,int2])
                     int1 +=1
             int2 +=1
-            flow=[mainiga-1 if mainiga >0 else = for mainiga in flow]
+            
 #             j+=1
         
 #         if j==n:
